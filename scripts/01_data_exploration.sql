@@ -17,13 +17,13 @@ WHERE TABLE_NAME = 'dim_products'
 SELECT * FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = 'fact_sales'
 
---�U�Ȱ�a
+--ÅU«È°ê®a
 
 SELECT DISTINCT 
 country
 FROM gold.dim_customers
 
---���~���O
+--²£«~Ãþ§O
 
 SELECT DISTINCT 
 category,
@@ -33,7 +33,7 @@ FROM gold.dim_products
 ORDER BY 1,2,3
 
 ----------------------------------------
---�������
+--¤é´Á±´¯Á
 ----------------------------------------
 SELECT
 MIN(order_date) firstorderdate,
@@ -45,7 +45,7 @@ MIN(due_date) firstdue_date,
 MAX(due_date) lastdue_date
 FROM gold.fact_sales
 
---�ȸs�~�֤��R
+--«È¸s¦~ÄÖ¤ÀªR
 SELECT
 MIN(birthdate) AS oldest,
 DATEDIFF(YEAR, MIN(birthdate),GETDATE()) AS oldest_age,
@@ -54,7 +54,7 @@ DATEDIFF(YEAR, MAX(birthdate),GETDATE()) AS youngest_age
 FROM gold.dim_customers
 
 ----------------------------------------
---�P��P��~����
+--¾P°â»PÀç·~±´¯Á
 ----------------------------------------
 
 --total sales
